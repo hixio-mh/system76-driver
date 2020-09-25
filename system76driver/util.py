@@ -26,7 +26,7 @@ from os import path
 import shutil
 import tempfile
 import distro
-import system76driver.jitsiurl
+import jitsiurl
 
 from .model import determine_model
 from .mockable import SubProcess

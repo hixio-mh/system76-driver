@@ -26,6 +26,7 @@ from os import path
 import shutil
 import tempfile
 import distro
+import system76driver.jitsiurl
 
 from .model import determine_model
 from .mockable import SubProcess
@@ -59,6 +60,7 @@ def dump_logs(base):
     dump_command(base, "lsblk", ["lsblk", "-f"])
     dump_command(base, "df", ["df", "-h"])
     dump_command(base, "journalctl", ["journalctl", "--since", "yesterday"])
+    dump_command(base, "jitsiurl", ["jitsiurl"])
     dump_path(base, "fstab", "/etc/fstab")
     dump_path(base, "apt/sources.list", "/etc/apt/sources.list")
     dump_path(base, "apt/sources.list.d", "/etc/apt/sources.list.d")
